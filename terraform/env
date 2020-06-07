@@ -1,0 +1,20 @@
+export PROJECT_NAME="sampleapp"
+
+# aws
+export TF_VAR_aws_profile=$AWS_PROFILE
+export TF_VAR_vpc_id="vpc-XXXXXXXX"
+
+# app
+export TF_VAR_project_name="$PROJECT_NAME"
+export TF_VAR_docker_image_name="martinzugnoni/sampleapp"
+export TF_VAR_docker_image_revision="0.0.1"
+
+# rds
+export TF_VAR_rds_allocated_storage="5"
+export TF_VAR_rds_engine="postgres"
+export TF_VAR_rds_engine_version="12.2"
+export TF_VAR_rds_instance_class="db.t2.micro"
+
+export TF_VAR_database_name="${TF_VAR_project_name}"
+export TF_VAR_database_user="${TF_VAR_project_name}"
+export TF_VAR_database_password="postgres"

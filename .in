@@ -1,0 +1,2 @@
+export DJANGO_SETTINGS_MODULE=sampleapp.settings.base
+export PYTHONPATH=sampleapp

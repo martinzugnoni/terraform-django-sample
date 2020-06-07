@@ -1,0 +1,22 @@
+[
+    {
+        "name": "${app_name}",
+        "image": "${app_image}",
+        "cpu": ${fargate_cpu},
+        "memory": ${fargate_memory},
+        "environment": [
+            {"name": "PROJECT_NAME", "value": "${app_name}"},
+            {"name": "POSTGRESQL_USER", "value": "${app_name}"},
+            {"name": "POSTGRESQL_PASSWORD", "value": "postgres"},
+            {"name": "POSTGRESQL_DB_NAME", "value": "${app_name}"},
+            {"name": "POSTGRESQL_HOST", "value": "${app_db_address}"},
+            {"name": "POSTGRESQL_PORT", "value": "${app_db_port}"}
+        ],
+        "portMappings": [
+            {
+                "containerPort": ${app_port},
+                "hostPort": ${app_port}
+            }
+        ]
+    }
+]
